@@ -1,6 +1,13 @@
 <?php
-require_once 'Animal.php';
-require_once 'Horse.php';
-require_once 'Chicken.php';
-require_once 'Cow.php';
-require_once 'Barn.php';
+require_once 'vendor/autoload.php';
+
+$horse = new \MyApp\Horse('Usain Colt', 7, 'm');
+$chicken = new \MyApp\Chicken('Hennifer Lopez', 2, 'f');
+$cow = new \MyApp\Cow('Moo Donna', 67, 'f');
+$barn = new \MyApp\Barn(4);
+
+$barn->house($horse);
+echo '<br>';
+$barn->house($chicken);
+echo '<br>';
+$barn->house($cow);
